@@ -1,7 +1,7 @@
 #!/bin/bash
 cd~
-chmod +x /root/autodeposit.sh
 touch /root/autodeposit.sh
+chmod +x /root/autodeposit.sh
 echo "#!/bin/bash" | tee -a /root/autodeposit.sh
 echo "yarn --cwd ~/ironfish/ironfish-cli/ start:once deposit" | tee -a /root/logs-ironfish/logfile.log
 echo "yarn --cwd ~/ironfish/ironfish-cli/ start:once config:get blockGraffiti" | tee -a /root/autodeposit.sh
