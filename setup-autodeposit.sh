@@ -7,5 +7,5 @@ echo "yarn --cwd ~/ironfish/ironfish-cli/ start:once config:get blockGraffiti" |
 echo "yarn --cwd ~/ironfish/ironfish-cli/ start:once deposit" | tee -a /root/autodeposit.sh
 mkdir logs-ironfish
 touch /root/logs-ironfish/logfile.log
-* * * * * root /root/autodeposit.sh | tee -a /root/logs-ironfish/logfile.log
+echo "* * * * * root /root/autodeposit.sh | tee -a /root/logs-ironfish/logfile.log" | tee -a /etc/crontab
 # tail -F /root/logs-ironfish/logfile.log
