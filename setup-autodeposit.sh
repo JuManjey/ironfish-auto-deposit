@@ -9,4 +9,5 @@ echo "yarn --cwd ~/ironfish/ironfish-cli/ start:once deposit" | tee -a /root/aut
 mkdir /root/logs-ironfish
 touch /root/logs-ironfish/logfile.log
 echo "* * * * * root /root/autodeposit.sh | tee -a /root/logs-ironfish/logfile.log" | tee -a /etc/crontab
+systemctl restart cron
 # tail -F /root/logs-ironfish/logfile.log
